@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio [Nama Anda] - Simpel & Elegan</title>
+    
+    <style>
+        /* Warna Dasar */
+        :root {
+            --primary-color: #4a4e69; /* Ungu gelap elegan */
+            --secondary-color: #9a8c98; /* Aksen abu-ungu */
+            --accent-color: #c9ada7; /* Cokelat muda/rose */
+            --text-dark: #22223b;
+            --text-light: #f2e9e4; /* Hampir putih */
+            --bg-light: #f9f9f9;
+        }
+
+        /* Reset dan Tipografi */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--text-light);
+            scroll-padding-top: 70px; /* Penting untuk smooth scroll dengan sticky header */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        /* Header & Navigasi */
+        header {
+            background: var(--primary-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--text-light);
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+
+        #navbar a {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        #navbar a:hover {
+            color: var(--accent-color);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .menu-toggle {
+            display: none; /* Sembunyikan di desktop */
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+
+        /* Bagian Tentang Saya (Hero) */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            background: var(--text-light);
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--accent-color);
+            box-shadow: 0 0 0 8px rgba(201, 173, 167, 0.3);
+        }
+
+        .text-content h2 {
+            text-align: left;
+            margin-bottom: 10px;
+            font-size: 3em;
+        }
+
+        .text-content h2::after {
+            margin-left: 0;
+            width: 80px;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        /* Timeline (Pengalaman & Pendidikan) */
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--secondary-color);
+        }
+
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            border: 3px solid var(--text-light);
+        }
+
+        .timeline-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .meta {
+            color: var(--secondary-color);
+            font-size: 0.9em;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-item ul {
+            padding-left: 20px;
+        }
+        
+        /* Keahlian Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 900px
