@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio [Nama Anda] - Simpel & Elegan</title>
+    <title>Portofolio PKL - Kekeh Endahdewi Marini</title>
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
-        /* Warna Dasar */
+        /* Variabel Warna Monokromatik & Aksen */
         :root {
-            --primary-color: #4a4e69; /* Ungu gelap elegan */
-            --secondary-color: #9a8c98; /* Aksen abu-ungu */
-            --accent-color: #c9ada7; /* Cokelat muda/rose */
-            --text-dark: #22223b;
-            --text-light: #f2e9e4; /* Hampir putih */
-            --bg-light: #f9f9f9;
+            --primary-dark: #2c3e50; /* Biru/Abu-abu gelap */
+            --secondary-light: #ecf0f1; /* Abu-abu sangat terang */
+            --text-main: #34495e; /* Teks konten */
+            --accent-color: #3498db; /* Aksen Biru Cerah (Profesional) */
+            --bg-white: #ffffff;
+            --border-gray: #bdc3c7;
         }
 
-        /* Reset dan Tipografi */
+        /* Reset dan Dasar */
         * {
             margin: 0;
             padding: 0;
@@ -24,11 +26,11 @@
         }
 
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--text-light);
-            scroll-padding-top: 70px; /* Penting untuk smooth scroll dengan sticky header */
+            color: var(--text-main);
+            background-color: var(--bg-white);
+            scroll-padding-top: 70px;
         }
 
         .container {
@@ -37,31 +39,33 @@
             margin: 0 auto;
         }
 
+        /* Tipografi Judul */
         h2 {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             font-size: 2.5em;
-            color: var(--primary-color);
-            position: relative;
+            color: var(--primary-dark);
+            font-weight: 300;
         }
 
         h2::after {
             content: '';
             display: block;
-            width: 60px;
+            width: 80px;
             height: 3px;
             background: var(--accent-color);
-            margin: 10px auto 0;
+            margin: 15px auto 0;
+            border-radius: 5px;
         }
 
         /* Header & Navigasi */
         header {
-            background: var(--primary-color);
+            background: var(--primary-dark);
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         header .container {
@@ -71,17 +75,19 @@
         }
 
         .logo {
-            color: var(--text-light);
-            font-size: 1.8em;
+            color: var(--bg-white);
+            font-size: 1.6em;
             font-weight: 700;
+            letter-spacing: 1px;
         }
 
         #navbar a {
-            color: var(--text-light);
+            color: var(--bg-white);
             text-decoration: none;
-            padding: 10px 15px;
+            padding: 10px 18px;
             transition: color 0.3s, background-color 0.3s;
-            border-radius: 5px;
+            border-radius: 4px;
+            font-size: 0.95em;
         }
 
         #navbar a:hover {
@@ -90,11 +96,11 @@
         }
 
         .menu-toggle {
-            display: none; /* Sembunyikan di desktop */
+            display: none;
             background: none;
             border: none;
-            color: var(--text-light);
-            font-size: 1.5em;
+            color: var(--bg-white);
+            font-size: 1.8em;
             cursor: pointer;
         }
 
@@ -103,106 +109,398 @@
             padding: 80px 0;
         }
 
-        .bg-light {
-            background-color: var(--bg-light);
+        .bg-gray {
+            background-color: var(--secondary-light);
         }
 
-        /* Bagian Tentang Saya (Hero) */
-        .hero {
-            min-height: 80vh;
+        /* Bagian Hero & Tentang Saya */
+        #about {
+            min-height: 90vh;
             display: flex;
             align-items: center;
-            background: var(--text-light);
         }
 
         .profile-info {
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 50px;
         }
 
         .profile-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            border-radius: 8px;
             object-fit: cover;
-            border: 5px solid var(--accent-color);
-            box-shadow: 0 0 0 8px rgba(201, 173, 167, 0.3);
+            border: 4px solid var(--accent-color);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
 
         .text-content h2 {
             text-align: left;
-            margin-bottom: 10px;
-            font-size: 3em;
+            font-size: 3.5em;
+            margin-bottom: 5px;
+            font-weight: 700;
+            color: var(--primary-dark);
         }
 
         .text-content h2::after {
             margin-left: 0;
-            width: 80px;
+            width: 100px;
         }
 
         .tagline {
-            font-style: italic;
-            color: var(--secondary-color);
-            margin-bottom: 20px;
-            font-size: 1.1em;
+            font-weight: 300;
+            color: var(--accent-color);
+            margin-bottom: 25px;
+            font-size: 1.3em;
         }
 
-        /* Timeline (Pengalaman & Pendidikan) */
-        .timeline {
+        /* Pendidikan */
+        #education .timeline {
             max-width: 800px;
+        }
+        
+        .timeline {
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
-            padding-left: 30px;
         }
 
         .timeline::before {
             content: '';
             position: absolute;
-            left: 0;
+            left: 50%;
             top: 0;
             bottom: 0;
-            width: 3px;
-            background: var(--secondary-color);
+            width: 2px;
+            background: var(--border-gray);
+            transform: translateX(-50%);
         }
 
         .timeline-item {
             margin-bottom: 40px;
+            width: 50%;
             position: relative;
-            padding-left: 20px;
+            padding: 15px 30px;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
         }
 
-        .timeline-item::before {
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+        
+        .timeline-item::after {
             content: '';
             position: absolute;
-            left: -8px;
-            top: 5px;
-            width: 18px;
-            height: 18px;
+            width: 15px;
+            height: 15px;
             background: var(--accent-color);
+            border: 3px solid var(--bg-white);
             border-radius: 50%;
-            border: 3px solid var(--text-light);
+            top: 20px;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -8.5px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -8.5px;
         }
 
         .timeline-item h3 {
-            color: var(--primary-color);
+            color: var(--primary-dark);
             margin-bottom: 5px;
+            font-size: 1.5em;
         }
 
         .timeline-item .meta {
-            color: var(--secondary-color);
-            font-size: 0.9em;
+            color: var(--accent-color);
+            font-size: 1em;
             font-style: italic;
             margin-bottom: 10px;
         }
+
+        /* Proyek/Portofolio (Pengalaman) */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
         
-        .timeline-item ul {
-            padding-left: 20px;
+        .project-card {
+            background: var(--bg-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 20px;
+        }
+        
+        .project-content h4 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .project-links a {
+            color: var(--accent-color);
+            margin-right: 15px;
+            text-decoration: none;
+            font-weight: 600;
         }
         
         /* Keahlian Grid */
         .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 900px
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-badge {
+            background: var(--bg-white);
+            color: var(--primary-dark);
+            padding: 8px 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            font-weight: 500;
+            border: 1px solid var(--border-gray);
+            font-size: 0.9em;
+        }
+        
+        .skill-badge i {
+            color: var(--accent-color);
+            margin-right: 5px;
+        }
+
+        /* Kontak */
+        #contact {
+            text-align: center;
+        }
+        .contact-details {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        
+        .contact-item a {
+            color: var(--text-main);
+            text-decoration: none;
+        }
+        
+        .contact-item i {
+            color: var(--accent-color);
+            margin-right: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: var(--border-gray);
+            text-align: center;
+            padding: 25px 0;
+            font-size: 0.9em;
+        }
+
+        /* Responsif (Mobile) */
+        @media (max-width: 768px) {
+            /* Navigasi Mobile */
+            #navbar { display: none; flex-direction: column; width: 100%; position: absolute; top: 60px; left: 0; background: var(--primary-dark); box-shadow: 0 4px 5px rgba(0,0,0,0.2); }
+            #navbar.active { display: flex; }
+            #navbar a { padding: 15px 20px; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+            .menu-toggle { display: block; }
+
+            /* Tentang Saya Mobile */
+            .profile-info { flex-direction: column; text-align: center; }
+            .profile-photo { margin-bottom: 20px; width: 150px; height: 150px; }
+            .text-content h2, .text-content h2::after { text-align: center; margin: 0 auto 15px auto; font-size: 2em; }
+            
+            /* Timeline Mobile */
+            .timeline::before { left: 10px; }
+            .timeline-item { width: 100%; left: 0 !important; padding-left: 40px; padding-right: 15px; text-align: left !important; }
+            .timeline-item:nth-child(odd) { border-right: none !important; }
+            .timeline-item:nth-child(even) { border-left: none !important; }
+            .timeline-item::after { left: 3px !important; right: auto !important; }
+            
+            /* Kontak Mobile */
+            .contact-details { flex-direction: column; gap: 20px; }
+            .contact-details a { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo"> Portofolio</h1>
+            <nav id="navbar">
+                <a href="#about" class="nav-link"><i class="fas fa-user"></i> Profil</a>
+                <a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> Pendidikan</a>
+                <a href="#projects" class="nav-link"><i class="fas fa-flask"></i> Proyek & Portofolio</a>
+                <a href="#skills" class="nav-link"><i class="fas fa-tools"></i> Keahlian</a>
+                <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Kontak</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="bg-white">
+            <div class="container">
+                <div class="profile-info">
+                    <img src="fotokekeh.jpg" alt="Foto Profil" class="profile-photo">
+                    <div class="text-content">
+                        <h2>kekeh endahdewi marini</h2>
+                        <p class="tagline">Rekayasa Perangkat Lunak</p>
+                        <p>Halo, nama saya Kekeh Endahdewi Marini. Saya adalah siswa SMK Informatika Utama, jurusan Rekayasa Perangkat Lunak, dengan ketertarikan mendalam dalam bidang pemrograman web. Saya memiliki pengalaman dalam mengembangkan website sederhana, salah satunya adalah sebuah online shop berbasis dinamis yang memungkinkan interaksi langsung dengan pengguna. Saya sangat bersemangat untuk terus belajar hal baru dan berinovasi dalam setiap proyek yang saya kerjakan. Tujuan saya adalah untuk mengembangkan keterampilan saya dalam pemrograman web dan menciptakan solusi teknologi yang berguna bagi banyak orang.</p>
+                        <p style="margin-top: 15px; font-weight: bold; color: var(--accent-color);">Tujuan PKL: Mendapatkan pengalaman praktis dalam [Sebutkan Tujuan, cth: konfigurasi server/pengembangan sistem informasi].</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="bg-gray">
+            <div class="container">
+                <h2>Pendidikan</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Rekayasa Perangkat Lunak</h3>
+                        <p class="meta"><i class="fas fa-school"></i> SMK Informatika Utama | 2024-2027</p>
+                        <p>Fokus Pembelajaran:Basis Data MySQL, programmer web.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>SMP islam Cakra Nusantara</h3>
+                        <p class="meta"><i class="fas fa-school"></i> 2021-2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="bg-white">
+            <div class="container">
+                <h2>Proyek </h2>
+                <p style="text-align: center; margin-bottom: 40px;">Proyek yang menunjukkan kemampuan teknis saya di bidang pemrograman:</p>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="path/to/project_image1.jpg" alt="Proyek 1">
+                        <div class="project-content">
+                            <h4>Website Online shop</h4>
+                            <p>Proyek sekolah menggunakan HTML, CSS, dan JavaScript,php.</p>
+                            <div class="project-links">
+                                <a href="[Link Demo/GitHub]" target="_blank">Lihat Proyek <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <img src="path/to/project_image2.jpg" alt="Proyek 2">
+                        <div class="project-content">
+                            <h4>Instalasi & Konfigurasi Server Lokal</h4>
+                            <p>Proyek mandiri: konfigurasi **Server Debian** (Web Server Apache dan DNS Server). Dokumentasi lengkap tersedia.</p>
+                            <div class="project-links">
+                                <a href="[Link Dokumentasi/PDF]" target="_blank">Lihat Dokumentasi <i class="fas fa-file-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="bg-gray">
+            <div class="container">
+                <h2>Keahlian Teknis & Soft Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-badge"><i class="fas fa-code"></i> HTML & CSS Dasar</div>
+                    <div class="skill-badge"><i class="fas fa-database"></i> Basis Data (MySQL)</div>
+                    <div class="skill-badge"><i class="fas fa-lightbulb"></i> Kemampuan Belajar Cepat</div>
+                    <div class="skill-badge"><i class="fas fa-users"></i> Kerja Tim</div>
+                    <div class="skill-badge"><i class="fas fa-comments"></i> Komunikasi Aktif</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-white">
+            <div class="container">
+                <h2>Kontak</h2>
+                <p>Siap untuk dihubungi mengenai kesempatan PKL:</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="kekeh.endahdewi50@smk.belajar.id">kekeh.endahdewi50@smk.belajar.id</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+9651652121">089651652121</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="[Link GitHub Anda]" target="_blank">GitHub/Portofolio Lain</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Portofolio PKL Kekeh.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (this.hash !== "") {
+                        e.preventDefault();
+                        document.querySelector(this.hash).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Menu Toggle untuk Mobile
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navbar = document.getElementById('navbar');
+
+            menuToggle.addEventListener('click', () => {
+                navbar.classList.toggle('active');
+            });
+            
+            // Tutup menu saat link diklik (di mobile)
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        navbar.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
