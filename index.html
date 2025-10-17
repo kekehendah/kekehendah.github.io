@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - [Nama Anda]</title>
+    <style>
+        /* 🎨 CSS untuk Tema Pastel */
+
+        /* Variabel Warna Pastel */
+        :root {
+            --pastel-pink: #f8e1e1; /* Merah muda lembut */
+            --pastel-blue: #e1f5fe; /* Biru muda lembut */
+            --pastel-green: #e5f8e0; /* Hijau muda lembut */
+            --pastel-yellow: #fffbe6; /* Kuning muda lembut */
+            --text-dark: #333333;
+            --text-light: #555555;
+            --accent-color: #8db596; /* Warna aksen/ikon */
+        }
+
+        /* Reset dan Dasar */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--pastel-yellow); /* Latar belakang utama */
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Tata Letak Kontainer */
+        .container {
+            width: 85%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Header dan Navigasi */
+        header {
+            background-color: var(--pastel-pink); /* Warna Header */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: var(--pastel-blue);
+        }
+
+        /* Bagian Utama (Section) */
+        section {
+            padding: 60px 0;
+            margin-bottom: 20px;
+            background-color: #ffffff; /* Latar belakang bagian putih */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        section:nth-child(even) {
+            background-color: var(--pastel-blue); /* Selang-seling warna */
+        }
+
+        /* Foto dan Profil */
+        #home {
+            text-align: center;
+            padding: 80px 0;
+            background-color: var(--pastel-green); /* Latar belakang Home */
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%; /* Bentuk lingkaran */
+            object-fit: cover;
+            border: 6px solid var(--pastel-pink); /* Bingkai pastel */
+            margin-bottom: 20px;
+        }
+
+        #home h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        #home p {
+            font-size: 1.2em;
+            color: var(--text-light);
+        }
+
+        /* Styling Umum untuk Konten */
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--accent-color);
+            font-size: 2em;
+        }
+
+        .item {
+            border-left: 5px solid var(--accent-color);
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .item h3 {
+            margin: 0 0 5px 0;
+            color: var(--text-dark);
+            font-size: 1.4em;
+        }
+
+        .item p {
+            margin: 0 0 10px 0;
+            font-size: 1em;
+            color: var(--text-light);
+        }
+
+        .item .meta {
+            font-style: italic;
+            color: var(--accent-color);
+            font-size: 0.9em;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--pastel-pink);
+            color: var(--text-dark);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#experience">Pengalaman</a></li>
+                <li><a href="#education">Pendidikan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <img src="path/to/your/photo.jpg" alt="Foto Profil [Nama Anda]" class="profile-photo">
+            <h1>Halo, Saya [Nama Lengkap Anda] 👋</h1>
+            <p>Seorang pelajar yang bersemangat dalam bidang [Sebutkan Minat/Bidang Anda, contoh: Desain Grafis & Pemrograman Web].</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <div class="item">
+                <p>Saya adalah siswa/mahasiswa dari [Nama Sekolah/Kampus Anda]. Saya memiliki ketertarikan yang besar dalam [Sebutkan 2-3 minat utama Anda, contoh: pengembangan *front-end*, analisis data, dan kepemimpinan]. Saya selalu berusaha untuk mempelajari hal-hal baru dan menerapkan keterampilan saya dalam proyek nyata. Saya juga aktif dalam [Sebutkan kegiatan ekstrakurikuler atau organisasi jika ada].</p>
+                <p><strong>Lokasi:</strong> [Kota Anda] | <strong>Email:</strong> [Email Anda]</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Pengalaman</h2>
+
+            <div class="item">
+                <h3>[Nama Posisi/Proyek]</h3>
+                <p class="meta">[Nama Organisasi/Sekolah/Perusahaan] | [Bulan Tahun Awal] - [Bulan Tahun Akhir]</p>
+                <p>Deskripsi singkat tentang tanggung jawab atau pencapaian Anda. Contoh: Berkontribusi dalam pengembangan sistem inventaris sekolah menggunakan HTML dan CSS, menghasilkan antarmuka yang lebih intuitif bagi pengguna.</p>
+            </div>
+
+            <div class="item">
+                <h3>Anggota Aktif Organisasi [Nama Organisasi]</h3>
+                <p class="meta">[Nama Sekolah/Organisasi] | [Tahun Awal] - Sekarang</p>
+                <p>Mengelola media sosial dan konten visual untuk kegiatan organisasi. Meningkatkan *engagement* sebesar 20% melalui desain poster dan konten yang menarik.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Pendidikan</h2>
+
+            <div class="item">
+                <h3>[Nama Sekolah/Kampus]</h3>
+                <p class="meta">[Tahun Masuk] - [Tahun Lulus (atau Sekarang)]</p>
+                <p><strong>Jurusan:</strong> [Sebutkan Jurusan Anda] | Fokus pada [Sebutkan bidang fokus, contoh: Jaringan Komputer dan Desain Interaksi Pengguna].</p>
+            </div>
+
+            <div class="item">
+                <h3>[Nama Sekolah Sebelumnya]</h3>
+                <p class="meta">[Tahun Masuk] - [Tahun Lulus]</p>
+                <p>Aktif dalam klub [Sebutkan kegiatan, contoh: Sains dan Bahasa Inggris].</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Portofolio [Nama Anda]. Dibuat dengan semangat dan warna pastel. ✨</p>
+    </footer>
+
+</body>
+</html>
